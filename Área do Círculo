@@ -1,0 +1,19 @@
+using System;
+using System.Globalization;
+namespace _1002URI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double A, R, N = 3.14159;
+
+            R = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            R = Math.Pow(R, 2.0);
+            A = N * R;
+
+            Console.WriteLine("A=" + A.ToString("F4", CultureInfo.InvariantCulture));
+        }
+    }
+}
