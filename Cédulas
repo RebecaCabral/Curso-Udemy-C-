@@ -48,7 +48,7 @@ namespace _1018URI
             Console.WriteLine(quociente + " nota (s) de R$ " + nota + ",00 ");
             resto = resto % nota;
 
-
+			//adicionando comentário
 
         }
     }
