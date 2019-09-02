@@ -1,0 +1,49 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int dia, hora, minuto, segundo, dia2, hora2, minuto2, segundo2;
+
+            Console.WriteLine(Calculo de duração do evento);
+
+            Console.WriteLine(Entre com o dia de inicio);
+            dia = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Entre com a hora de inicio no formato hhmmss);
+            string[] vet;
+            vet = Console.ReadLine().Split('');
+
+            hora = int.Parse(vet[0]);
+            minuto = int.Parse(vet[1]);
+            segundo = int.Parse(vet[2]);
+
+            DateTime InicioDoEvento = new DateTime(2019, 02, dia, hora, minuto, segundo);
+
+            Console.WriteLine(Entre com o ultimo dia);
+            dia2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Entre com a hora do fim no formato hhmmss);
+            vet = Console.ReadLine().Split('');
+
+            hora2 = int.Parse(vet[0]);
+            minuto2 = int.Parse(vet[1]);
+            segundo2 = int.Parse(vet[2]);
+
+            DateTime FimoDoEvento = new DateTime(2019, 02, dia2, hora2, minuto2, segundo2);
+
+            TimeSpan resultado = FimoDoEvento - InicioDoEvento;
+
+            Console.WriteLine(resultado.Days +  dia(s));
+            Console.WriteLine(resultado.Hours +  hora(s));
+            Console.WriteLine(resultado.Minutes +  minuto(s));
+            Console.WriteLine(resultado.Seconds +  segundo(s));
+
+
+            Console.ReadKey();
+        }
+    }
+}
